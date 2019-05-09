@@ -6,7 +6,7 @@
 /*   By: dchen <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 16:22:21 by dchen             #+#    #+#             */
-/*   Updated: 2019/02/28 12:37:37 by dchen            ###   ########.fr       */
+/*   Updated: 2019/05/08 23:03:46 by dchen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_strdup(const char *src);
-size_t			ft_strlcat(char *dest, const char *src, size_t size);
+size_t			ft_strlcat(char *dest, const char *src, size_t dstsize);
 size_t			ft_strlen(const char *str);
 char			*ft_strncat(char *dest, const char *src, size_t nb);
 char			*ft_strstr(const char *str, const char *to_find);
@@ -84,10 +84,12 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list*elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void			ft_lstrev(t_list **alst);
 int				ft_ispowerof2(unsigned int n);
 char			*ft_strrev(char *str);
 int				ft_max(int *tab, unsigned int len);
 void			ft_print_hex(unsigned int n);
 size_t			ft_wordcount(char *str, char c);
+
 
 #endif
